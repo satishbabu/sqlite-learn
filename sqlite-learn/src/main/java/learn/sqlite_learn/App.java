@@ -12,7 +12,7 @@ import java.sql.Statement;
  */
 public class App {
 	public static void main(String[] args) throws SQLException {
-		try (Connection conn = DriverManager.getConnection("jdbc:sqlite:/projects/sqlite/test.db")) {
+		try (Connection conn = DriverManager.getConnection("jdbc:sqlite:src/main/resources/test.db")) {
 
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("Select name from employee");
